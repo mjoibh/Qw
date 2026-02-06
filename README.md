@@ -1,1 +1,958 @@
-# Qw
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+                          SUDAN FREE 🇸🇩 🔥🫡                               
+  
+    <title>VÉÑÓÒM | خبير الأمن السيبراني واختبار الاختراق</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0c0c0c;
+            --secondary-color: #8B0000;
+            --accent-color: #FF0000;
+            --blue-color: #1E90FF;
+            --text-color: #e0e0e0;
+            --light-bg: #1a1a1a;
+            --card-bg: #222222;
+            --section-padding: 80px 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* الترويسة */
+        header {
+            background: linear-gradient(to bottom, rgba(12, 12, 12, 0.95), rgba(12, 12, 12, 0.8));
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--blue-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            height: 50px;
+            overflow: hidden;
+        }
+        
+        .logo-text {
+            animation: typingDelete 6s infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        /* القسم الرئيسي */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(12, 12, 12, 1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="rgba(255,0,0,0.05)" stroke-width="1"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .hero-text h1 .name {
+            color: var(--blue-color);
+            display: block;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            animation: neon 1.5s ease-in-out infinite alternate;
+            text-shadow: 0 0 5px var(--blue-color), 0 0 10px var(--blue-color);
+        }
+        
+        .hero-text h2 {
+            color: var(--accent-color);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #b0b0b0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+        }
+        
+        .hero-image {
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 2px solid var(--secondary-color);
+        }
+        
+        /* الأقسام العامة */
+        section {
+            padding: var(--section-padding);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+        }
+        
+        .section-title p {
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* قسم المهارات */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .skill-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* قسم الأدوات والمصطلحات - تصميم جديد */
+        .presentation-section {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+        }
+        
+        .presentation-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .presentation-slide {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(139, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            cursor: pointer;
+            padding: 15px;
+            background-color: rgba(139, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        
+        .slide-header:hover {
+            background-color: rgba(139, 0, 0, 0.2);
+        }
+        
+        .slide-header h3 {
+            color: var(--accent-color);
+            font-size: 1.8rem;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .slide-header i {
+            margin-left: 15px;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .slide-content {
+            display: none;
+            padding-top: 20px;
+            animation: slideDown 0.5s ease-out;
+        }
+        
+        .slide-content.active {
+            display: block;
+        }
+        
+        .tool-item, .term-item {
+            background-color: rgba(30, 30, 30, 0.7);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-right: 4px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+        
+        .tool-item:hover, .term-item:hover {
+            transform: translateX(-10px);
+            background-color: rgba(139, 0, 0, 0.1);
+        }
+        
+        .tool-item h4, .term-item h4 {
+            color: var(--blue-color);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .tool-item p, .term-item p {
+            color: #b0b0b0;
+            line-height: 1.7;
+        }
+        
+        /* قسم الشهادات */
+        .cert-badge {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(139, 0, 0, 0.3);
+        }
+        
+        .cert-badge i {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .cert-badge h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        /* قسم طريقة العمل */
+        .work-process {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .step-number {
+            background-color: var(--secondary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        /* التذييل */
+        footer {
+            background-color: #0a0a0a;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(139, 0, 0, 0.3);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(139, 0, 0, 0.3);
+        }
+        
+        .contact-form h3 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .contact-form p {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #b0b0b0;
+            line-height: 1.8;
+        }
+        
+        .email-container {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 0, 0, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
+        
+        .email-link {
+            color: var(--blue-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(30, 144, 255, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .email-link:hover {
+            background-color: rgba(30, 144, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* التجاوب مع الأجهزة المختلفة */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-text h1 .name {
+                font-size: 3.2rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            
+            .presentation-slide {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-text h1 .name {
+                font-size: 2.8rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .logo {
+                font-size: 28px;
+                height: 40px;
+            }
+            
+            .slide-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .presentation-slide {
+                padding: 20px;
+            }
+        }
+        
+        /* تأثيرات الحركة للاسم */
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 5px var(--blue-color), 0 0 10px var(--blue-color);
+            }
+            to {
+                text-shadow: 0 0 10px var(--blue-color), 0 0 20px var(--blue-color), 0 0 30px var(--blue-color);
+            }
+        }
+        
+        @keyframes typingDelete {
+            0% {
+                width: 0;
+                border-right: 3px solid var(--blue-color);
+            }
+            30% {
+                width: 100%;
+                border-right: 3px solid var(--blue-color);
+            }
+            70% {
+                width: 100%;
+                border-right: 3px solid var(--blue-color);
+            }
+            100% {
+                width: 0;
+                border-right: 3px solid transparent;
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-header.active i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- الترويسة -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-text">VÉÑÓÒM</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من هو VÉÑÓÒM</a></li>
+                    <li><a href="#skills">المهارات</a></li>
+                    <li><a href="#presentation">الأدوات والمصطلحات</a></li>
+                    <li><a href="#contact">اتصل بي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span class="name">VÉÑÓÒM</span>
+                </h1>
+                <h2>خبير الأمن السيبراني واختبار الاختراق</h2>
+                <p>خبير أمن سيبراني معتمد ومتخصص في اختبار اختراق الأنظمة والمواقع الإلكترونية والشبكات. حاصل على شهادة OSCP ولدي خبرة عملية واسعة في كشف الثغرات الأمنية وتقييم مستويات الحماية.</p>
+                <p>أقدم تقارير دقيقة وشاملة توضح النتائج والتوصيات اللازمة لتعزيز الأمن. دقتي في العمل وتحليلي الشامل يجعلانني الخيار الأمثل للشركات التي تسعى لحماية أنظمتها وبياناتها من التهديدات السيبرانية.</p>
+                <a href="#contact" class="cta-button">تواصل معي</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="خبير الأمن السيبراني">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم من أنا -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>من هو VÉÑÓÒM</h2>
+                <p>خبير أمن سيبراني معتمد ومتخصص في اختبار الاختراق والتقييم الأمني</p>
+            </div>
+            <div class="about-content">
+                <div style="background-color: var(--card-bg); padding: 40px; border-radius: 10px; line-height: 1.8;">
+                    <h3 style="color: var(--accent-color); margin-bottom: 25px; font-size: 1.8rem;">خبرتي ومهاراتي:</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 30px;">
+                        <div style="padding: 20px; background-color: rgba(255, 0, 0, 0.05); border-radius: 8px;">
+                            <h4 style="color: white; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-left: 8px;"></i> اختبار اختراق متقدم</h4>
+                            <p>أمتلك خبرة متقدمة في اختبار اختراق الأنظمة والشبكات والتطبيقات باستخدام أحدث الأدوات والمنهجيات.</p>
+                        </div>
+                        
+                        <div style="padding: 20px; background-color: rgba(255, 0, 0, 0.05); border-radius: 8px;">
+                            <h4 style="color: white; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-left: 8px;"></i> كشف الثغرات الأمنية</h4>
+                            <p>أقوم باكتشاف وتصنيف الثغرات الأمنية بدقة عالية وتقديم حلول عملية لمعالجتها.</p>
+                        </div>
+                        
+                        <div style="padding: 20px; background-color: rgba(255, 0, 0, 0.05); border-radius: 8px;">
+                            <h4 style="color: white; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-left: 8px;"></i> تقارير احترافية</h4>
+                            <p>أعد تقارير شاملة ومفصلة تساعد المؤسسات على فهم نقاط الضعف واتخاذ الإجراءات المناسبة.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 25px; background-color: rgba(255, 0, 0, 0.1); border-right: 4px solid var(--accent-color); border-radius: 8px;">
+                        <h3 style="color: var(--accent-color); margin-bottom: 15px; display: flex; align-items: center;">
+                            <i class="fas fa-award" style="margin-left: 10px;"></i> الشهادة المهنية OSCP
+                        </h3>
+                        <p>حاصل على شهادة OSCP (Offensive Security Certified Professional) التي تثبت مهاراتي المتقدمة في اختبار الاختراق العملي في بيئات حقيقية. هذه الشهادة تعتبر معيارًا مهنيًا مرموقًا في مجال الأمن السيبراني الهجومي وتؤكد قدرتي على:</p>
+                        <ul style="margin-top: 15px; padding-right: 20px;">
+                            <li style="margin-bottom: 8px;">تنفيذ اختبارات اختراق متقدمة</li>
+                            <li style="margin-bottom: 8px;">استغلال الثغرات في بيئات متنوعة</li>
+                            <li style="margin-bottom: 8px;">كتابة تقارير احترافية مفصلة</li>
+                            <li>استخدام منهجيات متقدمة في التقييم الأمني</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المهارات -->
+    <section id="skills" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>مهاراتي في الأمن السيبراني</h2>
+                <p>مجموعة المهارات التقنية والعملية التي أمتلكها كخبير في اختبار الاختراق والتقييم الأمني</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>اختبار اختراق الأنظمة</h3>
+                    <p>تنفيذ اختبارات اختراق شاملة لأنظمة التشغيل والخوادم لتقييم مستوى أمانها وكشف الثغرات الأمنية المحتملة باستخدام أدوات متخصصة.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>اختبار اختراق المواقع الإلكترونية</h3>
+                    <p>فحص وتقييم أمان التطبيقات والمواقع الإلكترونية للكشف عن الثغرات مثل XSS و SQL Injection وغيرها من نقاط الضعف.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>اختبار اختراق الشبكات</h3>
+                    <p>تقييم أمان البنية التحتية للشبكات، والكشف عن الثغرات في الأجهزة والتكوينات الشبكية وفحص أمان الاتصالات.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-search"></i>
+                    <h3>كشف الثغرات الأمنية</h3>
+                    <p>استخدام أدوات متقدمة ومنهجيات متنوعة لاكتشاف الثغرات الأمنية وتصنيفها حسب درجة خطورتها وتأثيرها المحتمل.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>تقرير النتائج والتوصيات</h3>
+                    <p>إعداد تقارير مفصلة وشاملة عن نتائج الاختبارات الأمنية مع تقديم توصيات عملية وقابلة للتطبيق لتعزيز الأمن.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>التقييم الأمني الشامل</h3>
+                    <p>تنفيذ تقييم أمني متكامل يشمل جميع جوانب الأمن السيبراني للمؤسسة مع التركيز على نقاط الضعف الحرجة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأدوات والمصطلحات - تصميم جديد -->
+    <section id="presentation" class="presentation-section">
+        <div class="container presentation-container">
+            <div class="section-title">
+                <h2>الأدوات والمصطلحات</h2>
+                <p>أشهر الأدوات والمصطلحات التي أستخدمها - قوائم منزلقة مثل العروض التقديمية</p>
+            </div>
+            
+            <div class="presentation-slide">
+                <div class="slide-header" data-slide="tools">
+                    <h3><i class="fas fa-tools"></i> أشهر 5 أدوات اختبار اختراق</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="slide-content" id="tools-slide">
+                    <div class="tool-item">
+                        <h4>1. Burp Suite</h4>
+                        <p>أداة متكاملة لاختبار أمان التطبيقات الويب، تستخدم لاكتشاف الثغرات في التطبيقات والمواقع الإلكترونية مثل XSS و SQL Injection.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>2. Metasploit</h4>
+                        <p>إطار عمل متقدم لتنفيذ اختبارات الاختراق وتطوير الثغرات الأمنية واستغلالها في بيئات متنوعة وأنظمة تشغيل مختلفة.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>3. Nmap</h4>
+                        <p>أداة مسح الشبكات لاكتشاف الأجهزة المتصلة والخدمات المفتوحة والثغرات المحتملة في بيئات الشبكات والأنظمة.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>4. John the Ripper</h4>
+                        <p>أداة لكسر كلمات المرور من خلال هجمات القوة الغاشمة والقواميس، تستخدم لاختبار قوة كلمات المرور وتقييم سياسات الأمان.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>5. Wireshark</h4>
+                        <p>أداة تحليل حزم البيانات في الشبكات، تستخدم لفحص حركة المرور الشبكية واكتشاف الأنشطة المشبوهة والثغرات الأمنية.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="presentation-slide">
+                <div class="slide-header" data-slide="terms">
+                    <h3><i class="fas fa-book"></i> أشهر 5 مصطلحات في الأمن السيبراني</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="slide-content" id="terms-slide">
+                    <div class="term-item">
+                        <h4>1. الثغرة الأمنية (Vulnerability)</h4>
+                        <p>نقطة ضعف في النظام أو البرنامج يمكن استغلالها من قبل المهاجمين للوصول غير المصرح به أو تنفيذ هجمات خبيثة.</p>
+                    </div>
+                    <div class="term-item">
+                        <h4>2. استغلال الثغرات (Exploitation)</h4>
+                        <p>استخدام ثغرة أمنية معروفة للوصول إلى النظام أو التحكم فيه أو استخراج البيانات منه بشكل غير مصرح.</p>
+                    </div>
+                    <div class="term-item">
+                        <h4>3. هندسة اجتماعية (Social Engineering)</h4>
+                        <p>التلاعب النفسي بالأفراد لجعلهم يقومون بإفشاء معلومات سرية أو تنفيذ إجراءات معينة لصالح المهاجم.</p>
+                    </div>
+                    <div class="term-item">
+                        <h4>4. التصيد الاحتيالي (Phishing)</h4>
+                        <p>هجوم يستهدف خداع الضحايا عبر رسائل بريد إلكتروني أو مواقع ويب مزيفة لسرقة البيانات الحساسة مثل كلمات المرور.</p>
+                    </div>
+                    <div class="term-item">
+                        <h4>5. هجوم حجب الخدمة (DDoS)</h4>
+                        <p>هجوم يهدف إلى إغراق الخوادم أو الشبكات بحركة مرور زائدة لجعلها غير متاحة للمستخدمين الشرعيين.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="presentation-slide">
+                <div class="slide-header" data-slide="methods">
+                    <h3><i class="fas fa-project-diagram"></i> منهجيات اختبار الاختراق</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="slide-content" id="methods-slide">
+                    <div class="tool-item">
+                        <h4>الاستطلاع وجمع المعلومات (Reconnaissance)</h4>
+                        <p>مرحلة جمع المعلومات عن الهدف باستخدام أدوات الاستطلاع والتقنيات المختلفة لفهم البنية التحتية.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>فحص الثغرات (Vulnerability Scanning)</h4>
+                        <p>استخدام أدوات متخصصة لاكتشاف نقاط الضعف والثغرات الأمنية في الأنظمة والشبكات والتطبيقات.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>استغلال الثغرات (Exploitation)</h4>
+                        <p>تطبيق تقنيات استغلال للوصول إلى الأنظمة أو الحصول على صلاحيات متقدمة باستخدام الثغرات المكتشفة.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>ما بعد الاستغلال (Post-Exploitation)</h4>
+                        <p>الأنشطة التي تتم بعد اختراق النظام للحفاظ على الوصول وجمع المزيد من المعلومات والتوسع داخل الشبكة.</p>
+                    </div>
+                    <div class="tool-item">
+                        <h4>تقرير النتائج (Reporting)</h4>
+                        <p>توثيق النتائج وتقديم توصيات لمعالجة الثغرات وتعزيز الأمن بناءً على الاكتشافات.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>تواصل معي</h3>
+                    <p>للحصول على خدمات اختبار الاختراق أو الاستشارات الأمنية المتخصصة، يرجى التواصل عبر البريد الإلكتروني:</p>
+                    <div class="email-container">
+                        <a href="mailto:gaferm862@gmail.com" class="email-link">
+                            <i class="fas fa-envelope" style="margin-left: 8px;"></i>
+                            gaferm862@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>خدماتي</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;">• اختبار اختراق الأنظمة</li>
+                        <li style="margin-bottom: 10px;">• اختبار اختراق المواقع الإلكترونية</li>
+                        <li style="margin-bottom: 10px;">• اختبار اختراق الشبكات</li>
+                        <li style="margin-bottom: 10px;">• التقييم الأمني الشامل</li>
+                        <li style="margin-bottom: 10px;">• استشارات أمنية متخصصة</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <div class="contact-form">
+                       <h3>للتواصل <h3>
+                        <p>يرجى التواصل مباشرة عبر البريد الإلكتروني المذكور أعلاه. سأرد على رسائلكم في أقرب وقت ممكن.</p>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <i class="fas fa-envelope-open-text" style="font-size: 3rem; color: var(--accent-color);"></i>
+                            <p style="margin-top: 15px;">يرجى إرسال رسالتك إلى:<br>
+                            <strong style="color: var(--blue-color); font-size: 1.2rem;">gaferm862@gmail.com</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2026 VÉÑÓÒM. جميع الحقوق محفوظة | خبير الأمن السيبراني واختبار الاختراق</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // تأثير التمرير السلس للروابط
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // تأثير عند التمرير
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(12, 12, 12, 0.95)';
+            } else {
+                header.style.backgroundColor = 'rgba(12, 12, 12, 0.9)';
+            }
+        });
+
+        // تأثير للبطاقات عند الظهور
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // تطبيق التأثير على البطاقات
+        document.querySelectorAll('.skill-card, .presentation-slide').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+
+        // تأثير الكتابة والمحو للشعار
+        const logoText = document.querySelector('.logo-text');
+        let isDeleting = false;
+        let charIndex = 0;
+        
+        function typeEffect() {
+            const text = 'VÉÑÓÒM';
+            const typingSpeed = 100;
+            const deletingSpeed = 50;
+            const pauseTime = 1500;
+            
+            if (!isDeleting && charIndex < text.length) {
+                // الكتابة
+                logoText.textContent = text.substring(0, charIndex + 1);
+                charIndex++;
+                setTimeout(typeEffect, typingSpeed);
+            } else if (isDeleting && charIndex > 0) {
+                // المسح
+                logoText.textContent = text.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeEffect, deletingSpeed);
+            } else {
+                // الانتظار ثم تغيير الحالة
+                isDeleting = !isDeleting;
+                setTimeout(typeEffect, pauseTime);
+            }
+        }
+        
+        // بدء التأثير
+        setTimeout(typeEffect, 1000);
+
+        // التحكم في القوائم المنزلقة
+        document.querySelectorAll('.slide-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const slideId = this.getAttribute('data-slide');
+                const content = document.getElementById(`${slideId}-slide`);
+                const icon = this.querySelector('i.fa-chevron-down');
+                
+                // إغلاق جميع القوائم الأخرى
+                document.querySelectorAll('.slide-content').forEach(slide => {
+                    if (slide !== content) {
+                        slide.classList.remove('active');
+                        const otherIcon = slide.closest('.presentation-slide').querySelector('.slide-header i.fa-chevron-down');
+                        otherIcon.classList.remove('active');
+                    }
+                });
+                
+                // فتح/إغلاق القائمة الحالية
+                content.classList.toggle('active');
+                icon.classList.toggle('active');
+                
+                // إذا كانت القائمة مغلقة، قم بالتمرير إليها
+                if (content.classList.contains('active')) {
+                    setTimeout(() => {
+                        content.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                }
+            });
+        });
+
+        // فتح القائمة الأولى تلقائياً
+        setTimeout(() => {
+            const firstHeader = document.querySelector('.slide-header');
+            if (firstHeader) {
+                firstHeader.click();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
